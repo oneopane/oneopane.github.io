@@ -13,13 +13,18 @@
 <body>
     <section id="hero" class="container">
         <div class="hero-content">
-            <h1 id="hero-name"></h1>
+            <div class="name-container">
+                <h1 id="hero-name"></h1>
+            </div>
             <div class="social-links">
+                <button id="email-btn" class="social-icon-btn" aria-label="Show email">
+                    <i class="fas fa-envelope"></i>
+                </button>
                 <a id="github-link" target="_blank"><i class="fab fa-github"></i></a>
-                <a id="twitter-link" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a id="linkedin-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a id="scholar-link" target="_blank"><i class="fas fa-graduation-cap"></i></a>
             </div>
+            <span id="email-display" class="email-display"></span>
             <div class="about-content" id="about-content">
                 <!-- Content will be loaded from config.js -->
             </div>

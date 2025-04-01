@@ -13,9 +13,8 @@ const config = {
     // Social Links
     social: {
         github: "https://github.com/oneopane",
-        twitter: "https://twitter.com/",
-        linkedin: "https://linkedin.com/in/",
-        googleScholar: "https://scholar.google.com/"
+        linkedin: "https://www.linkedin.com/in/ojash-neopane-a0aa0b81/",
+        googleScholar: "https://scholar.google.com/citations?user=lmAQ1l8AAAAJ&hl=en&oi=ao"
     },
 
     // About Me Content

@@ -6,16 +6,32 @@ document.addEventListener('DOMContentLoaded', () => {
     document.title = config.site.title;
     
     // Update name and title
-    document.querySelector('h1').textContent = config.name;
+    document.querySelector('#hero-name').textContent = config.name;
+    
+    // Set up email button functionality
+    const emailBtn = document.getElementById('email-btn');
+    const emailDisplay = document.getElementById('email-display');
+    
+    emailBtn.addEventListener('click', () => {
+        emailDisplay.textContent = config.email;
+        emailDisplay.classList.toggle('visible');
+        
+        // Auto-hide email after 10 seconds
+        if (emailDisplay.classList.contains('visible')) {
+            setTimeout(() => {
+                emailDisplay.classList.remove('visible');
+            }, 10000);
+        }
+    });
     
     // Update social links
-    const socialLinks = document.querySelector('.social-links');
-    socialLinks.innerHTML = `
-        <a href="${config.social.github}" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="${config.social.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="${config.social.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="${config.social.googleScholar}" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-    `;
+    const githubLink = document.getElementById('github-link');
+    const linkedinLink = document.getElementById('linkedin-link');
+    const scholarLink = document.getElementById('scholar-link');
+    
+    githubLink.href = config.social.github;
+    linkedinLink.href = config.social.linkedin;
+    scholarLink.href = config.social.googleScholar;
     
     // Update about content
     const aboutContent = document.querySelector('.about-content');
