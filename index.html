@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ojash Neopane | ML Researcher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="hero" class="container">
+        <div class="hero-content">
+            <h1 id="hero-name"></h1>
+            <div class="social-links">
+                <a id="github-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a id="twitter-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a id="linkedin-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a id="scholar-link" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+            <div class="about-content" id="about-content">
+                <!-- Content will be loaded from config.js -->
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/profile.jpg" alt="Ojash Neopane" class="profile-image">
+        </div>
+    </section>
+
+    <section id="publications" class="container section">
+        <div class="section-header">
+            <div class="title-group">
+                <h2 class="section-title" id="publications-title">Selected Publications</h2>
+                <button id="showAllBtn" class="show-all-btn">Show All</button>
+            </div>
+        </div>
+        <div class="publications-list" data-featured-pubs="neopane2025optimistic, neopane2025logarithmic, neopane2021best">
+            <!-- Publications will be loaded dynamically from ref.bib -->
+            <div class="loading-publications">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading publications...</p>
+            </div>
+        </div>
+        
+        <div id="workshop-publications" class="workshop-section">
+            <h3 class="workshop-title">Workshop Papers</h3>
+            <div class="workshop-publications-list">
+                <!-- Workshop papers will be loaded dynamically from ref.bib -->
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
